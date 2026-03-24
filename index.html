@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Amoco BP Elburn — 940 N Main Street, Elburn IL. Open 24 hours, 7 days a week. Gas, diesel, and convenience store." />
+  <meta name="keywords" content="gas station Elburn, BP Amoco Elburn, fuel Elburn IL, gas near Geneva IL, diesel Elburn, 24 hour gas station Kane County" />
+  <title>Amoco BP Elburn — Open 24/7</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --red:    #CC0000;
+      --red-dk: #990000;
+      --blue:   #004B87;
+      --blue-lt:#0066B3;
+      --white:  #FFFFFF;
+      --off:    #F5F5F5;
+      --gray:   #555555;
+      --light:  #E8E8E8;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      color: #222;
+      background: var(--white);
+    }
+
+    /* ── HEADER ── */
+    header {
+      background: linear-gradient(135deg, var(--blue) 0%, var(--blue-lt) 50%, var(--red) 100%);
+      color: var(--white);
+      text-align: center;
+      padding: 48px 20px 40px;
+      position: relative;
+      overflow: hidden;
+    }
+    header::before {
+      content: '';
+      position: absolute;
+      top: -60px; right: -60px;
+      width: 220px; height: 220px;
+      border-radius: 50%;
+      background: rgba(255,255,255,0.06);
+    }
+    header::after {
+      content: '';
+      position: absolute;
+      bottom: -80px; left: -40px;
+      width: 280px; height: 280px;
+      border-radius: 50%;
+      background: rgba(255,255,255,0.04);
+    }
+
+    .torch {
+      width: 64px;
+      height: 64px;
+      margin: 0 auto 16px;
+      display: block;
+    }
+
+    header h1 {
+      font-size: clamp(1.8rem, 5vw, 2.8rem);
+      font-weight: 900;
+      letter-spacing: -0.5px;
+      line-height: 1.1;
+    }
+    header h1 span { color: #FFD700; }
+
+    .badge {
+      display: inline-block;
+      background: rgba(255,255,255,0.18);
+      border: 1px solid rgba(255,255,255,0.35);
+      border-radius: 999px;
+      padding: 6px 18px;
+      font-size: 0.85rem;
+      font-weight: 600;
+      letter-spacing: 0.5px;
+      margin-top: 12px;
+    }
+
+    .header-info {
+      margin-top: 20px;
+      font-size: 0.95rem;
+      opacity: 0.92;
+      line-height: 1.7;
+    }
+    .header-info a {
+      color: var(--white);
+      text-decoration: none;
+      font-weight: 600;
+    }
+    .header-info a:hover { text-decoration: underline; }
+
+    .cta-row {
+      display: flex;
+      gap: 12px;
+      justify-content: center;
+      flex-wrap: wrap;
+      margin-top: 24px;
+    }
+    .btn {
+      display: inline-block;
+      padding: 12px 28px;
+      border-radius: 8px;
+      font-weight: 700;
+      font-size: 0.95rem;
+      text-decoration: none;
+      transition: transform 0.1s, opacity 0.1s;
+    }
+    .btn:active { transform: scale(0.97); }
+    .btn-white {
+      background: var(--white);
+      color: var(--blue);
+    }
+    .btn-outline {
+      background: transparent;
+      color: var(--white);
+      border: 2px solid rgba(255,255,255,0.7);
+    }
+
+    /* ── FUEL PRICES ── */
+    .section { padding: 48px 20px; max-width: 860px; margin: 0 auto; }
+
+    .section-title {
+      font-size: 1.6rem;
+      font-weight: 800;
+      color: var(--blue);
+      margin-bottom: 6px;
+    }
+    .section-sub {
+      font-size: 0.9rem;
+      color: var(--gray);
+      margin-bottom: 28px;
+    }
+
+    .prices-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+      gap: 16px;
+    }
+
+    .price-card {
+      background: var(--white);
+      border: 2px solid var(--light);
+      border-radius: 14px;
+      text-align: center;
+      padding: 22px 16px 18px;
+      position: relative;
+      overflow: hidden;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+      transition: transform 0.15s, box-shadow 0.15s;
+    }
+    .price-card:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+    }
+    .price-card::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 5px;
+    }
+    .price-card.regular::before  { background: var(--red); }
+    .price-card.midgrade::before { background: #E8A000; }
+    .price-card.premium::before  { background: var(--blue); }
+    .price-card.diesel::before   { background: #2E7D32; }
+
+    .price-grade {
+      font-size: 0.78rem;
+      font-weight: 700;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      color: var(--gray);
+      margin-bottom: 10px;
+    }
+    .price-amount {
+      font-size: 2.2rem;
+      font-weight: 900;
+      color: #111;
+      line-height: 1;
+    }
+    .price-amount sup {
+      font-size: 1rem;
+      font-weight: 700;
+      vertical-align: super;
+    }
+    .price-octane {
+      font-size: 0.75rem;
+      color: var(--gray);
+      margin-top: 6px;
+    }
+
+    .price-updated {
+      text-align: center;
+      font-size: 0.78rem;
+      color: #999;
+      margin-top: 14px;
+    }
+
+    /* ── DIVIDER ── */
+    .divider {
+      height: 1px;
+      background: var(--light);
+      max-width: 860px;
+      margin: 0 auto;
+    }
+
+    /* ── STORE SECTION ── */
+    .store-section {
+      background: var(--off);
+      padding: 48px 20px;
+    }
+    .store-inner {
+      max-width: 860px;
+      margin: 0 auto;
+    }
+
+    .products-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+      gap: 14px;
+    }
+
+    .product-card {
+      background: var(--white);
+      border-radius: 12px;
+      padding: 20px 14px;
+      text-align: center;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.06);
+      transition: transform 0.15s;
+    }
+    .product-card:hover { transform: translateY(-2px); }
+    .product-icon {
+      font-size: 2rem;
+      margin-bottom: 8px;
+      display: block;
+    }
+    .product-name {
+      font-size: 0.82rem;
+      font-weight: 600;
+      color: #333;
+      line-height: 1.3;
+    }
+
+    /* ── MAP ── */
+    .map-section {
+      padding: 48px 20px;
+      max-width: 860px;
+      margin: 0 auto;
+    }
+    .map-wrap {
+      border-radius: 16px;
+      overflow: hidden;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.12);
+      line-height: 0;
+    }
+    .map-wrap iframe {
+      width: 100%;
+      height: 380px;
+      border: 0;
+      display: block;
+    }
+
+    /* ── HOURS + CONTACT ── */
+    .info-strip {
+      background: var(--blue);
+      color: var(--white);
+      padding: 40px 20px;
+      text-align: center;
+    }
+    .info-strip h2 {
+      font-size: 1.5rem;
+      font-weight: 800;
+      margin-bottom: 6px;
+    }
+    .info-strip p {
+      font-size: 0.95rem;
+      opacity: 0.88;
+      margin-bottom: 4px;
+    }
+    .info-strip a {
+      color: #FFD700;
+      text-decoration: none;
+      font-weight: 700;
+    }
+
+    /* ── FOOTER ── */
+    footer {
+      background: #111;
+      color: #888;
+      text-align: center;
+      padding: 20px;
+      font-size: 0.78rem;
+    }
+    footer a { color: #aaa; }
+
+    /* ── MOBILE ── */
+    @media (max-width: 480px) {
+      .prices-grid { grid-template-columns: repeat(2, 1fr); }
+      .products-grid { grid-template-columns: repeat(2, 1fr); }
+      header { padding: 36px 16px 32px; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- ══════════════════════════════════════
+     HEADER
+══════════════════════════════════════ -->
+<header>
+  <!-- Amoco BP Torch SVG -->
+  <svg class="torch" viewBox="0 0 64 90" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+    <ellipse cx="32" cy="82" rx="18" ry="7" fill="rgba(0,0,0,0.25)"/>
+    <rect x="26" y="40" width="12" height="38" rx="6" fill="#FFFFFF"/>
+    <path d="M32 38 C20 28 16 16 22 8 C24 22 30 24 32 28 C34 24 40 22 42 8 C48 16 44 28 32 38Z" fill="#CC0000"/>
+    <path d="M32 36 C24 28 22 20 26 14 C27 22 30 24 32 26 C34 24 37 22 38 14 C42 20 40 28 32 36Z" fill="#FFD700"/>
+    <path d="M32 33 C28 27 27 22 30 18 C30.5 22 31.2 23.5 32 25 C32.8 23.5 33.5 22 34 18 C37 22 36 27 32 33Z" fill="#FFFFFF"/>
+  </svg>
+
+  <h1>Amoco BP <span>Elburn</span></h1>
+  <div class="badge">⛽ Open 24 Hours · 7 Days a Week</div>
+  <div class="header-info">
+    <a href="https://maps.google.com/?q=940+N+Main+Street+Elburn+IL+60119">940 N Main Street, Elburn IL 60119</a><br/>
+    <a href="tel:6303656671">630.365.6671</a>
+  </div>
+  <div class="cta-row">
+    <a href="tel:6303656671" class="btn btn-white">📞 Call Us</a>
+    <a href="https://maps.google.com/?q=940+N+Main+Street+Elburn+IL+60119" class="btn btn-outline">🗺️ Get Directions</a>
+  </div>
+</header>
+
+
+<!-- ══════════════════════════════════════
+     FUEL PRICES
+══════════════════════════════════════ -->
+<section class="section" id="prices">
+  <div class="section-title">Today's Fuel Prices</div>
+  <div class="section-sub" id="price-date">Updated daily · Prices in USD per gallon</div>
+
+  <div class="prices-grid" id="prices-grid">
+    <!-- Injected by update-prices.py / static fallback below -->
+    <div class="price-card regular">
+      <div class="price-grade">Regular</div>
+      <div class="price-amount"><sup>$</sup><span id="p-regular">4.21</span></div>
+      <div class="price-octane">87 Octane</div>
+    </div>
+    <div class="price-card midgrade">
+      <div class="price-grade">Midgrade</div>
+      <div class="price-amount"><sup>$</sup><span id="p-midgrade">5.11</span></div>
+      <div class="price-octane">89 Octane</div>
+    </div>
+    <div class="price-card premium">
+      <div class="price-grade">Premium</div>
+      <div class="price-amount"><sup>$</sup><span id="p-premium">5.81</span></div>
+      <div class="price-octane">93 Octane</div>
+    </div>
+    <div class="price-card diesel">
+      <div class="price-grade">Diesel</div>
+      <div class="price-amount"><sup>$</sup><span id="p-diesel">5.81</span></div>
+      <div class="price-octane">ULSD</div>
+    </div>
+  </div>
+  <div class="price-updated" id="price-updated">Prices last updated: <span id="updated-date">loading…</span></div>
+</section>
+
+<!-- Load prices from prices.json at runtime -->
+<script>
+  fetch('prices.json')
+    .then(r => r.json())
+    .then(d => {
+      if (d.regular)  document.getElementById('p-regular').textContent  = Number(d.regular).toFixed(2);
+      if (d.midgrade) document.getElementById('p-midgrade').textContent = Number(d.midgrade).toFixed(2);
+      if (d.premium)  document.getElementById('p-premium').textContent  = Number(d.premium).toFixed(2);
+      if (d.diesel)   document.getElementById('p-diesel').textContent   = Number(d.diesel).toFixed(2);
+      if (d.updated)  document.getElementById('updated-date').textContent = d.updated;
+    })
+    .catch(() => {
+      document.getElementById('updated-date').textContent = 'See pump for current pricing';
+    });
+</script>
+
+
+<div class="divider"></div>
+
+
+<!-- ══════════════════════════════════════
+     CONVENIENCE STORE
+══════════════════════════════════════ -->
+<section class="store-section" id="store">
+  <div class="store-inner">
+    <div class="section-title">Convenience Store</div>
+    <div class="section-sub">Stocked around the clock — everything you need, whenever you need it</div>
+
+    <div class="products-grid">
+      <div class="product-card">
+        <span class="product-icon">⚡</span>
+        <div class="product-name">Energy Drinks</div>
+      </div>
+      <div class="product-card">
+        <span class="product-icon">🟢</span>
+        <div class="product-name">Nicotine Pouches</div>
+      </div>
+      <div class="product-card">
+        <span class="product-icon">💨</span>
+        <div class="product-name">Nicotine Vapes</div>
+      </div>
+      <div class="product-card">
+        <span class="product-icon">🍿</span>
+        <div class="product-name">Snacks &amp; Candy</div>
+      </div>
+      <div class="product-card">
+        <span class="product-icon">🃏</span>
+        <div class="product-name">Pokémon Cards</div>
+      </div>
+      <div class="product-card">
+        <span class="product-icon">🚗</span>
+        <div class="product-name">Die Cast Cars</div>
+      </div>
+      <div class="product-card">
+        <span class="product-icon">🎮</span>
+        <div class="product-name">Remote Control Toys</div>
+      </div>
+      <div class="product-card">
+        <span class="product-icon">🔥</span>
+        <div class="product-name">Novelty Lighters</div>
+      </div>
+      <div class="product-card">
+        <span class="product-icon">📱</span>
+        <div class="product-name">Phone Accessories</div>
+      </div>
+      <div class="product-card">
+        <span class="product-icon">🤠</span>
+        <div class="product-name">Cowboy Hats</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ══════════════════════════════════════
+     MAP
+══════════════════════════════════════ -->
+<section class="map-section" id="directions">
+  <div class="section-title">Find Us</div>
+  <div class="section-sub">940 N Main Street (Route 47), Elburn IL 60119 · Easy access from Geneva, St. Charles &amp; Batavia</div>
+  <div class="map-wrap">
+    <iframe
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2966.0!2d-88.4700!3d41.8950!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x880f2c6f1a8d6e3d%3A0x1!2s940+N+Main+St%2C+Elburn%2C+IL+60119!5e0!3m2!1sen!2sus!4v1"
+      allowfullscreen=""
+      loading="lazy"
+      referrerpolicy="no-referrer-when-downgrade"
+      title="Amoco BP Elburn Location Map"
+    ></iframe>
+  </div>
+</section>
+
+
+<!-- ══════════════════════════════════════
+     HOURS + CONTACT
+══════════════════════════════════════ -->
+<div class="info-strip" id="contact">
+  <h2>Always Open</h2>
+  <p>24 Hours a Day · 7 Days a Week · 365 Days a Year</p>
+  <p style="margin-top:16px;">📍 <strong>940 N Main Street, Elburn IL 60119</strong></p>
+  <p>📞 <a href="tel:6303656671">630.365.6671</a></p>
+  <p style="margin-top:12px; font-size:0.85rem; opacity:0.7;">Serving Elburn, Geneva, St. Charles, Batavia, Sugar Grove &amp; surrounding Kane County</p>
+</div>
+
+
+<!-- ══════════════════════════════════════
+     FOOTER
+══════════════════════════════════════ -->
+<footer>
+  <p>© 2026 Sevenstar Services, Inc. · 940 N Main Street, Elburn IL 60119 · <a href="tel:6303656671">630.365.6671</a></p>
+  <p style="margin-top:6px;">BP and Amoco are registered trademarks of BP p.l.c. Used under license.</p>
+</footer>
+
+</body>
+</html>
