@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=AW-18048095591"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'AW-18048095591');
+    function trackPhoneClick() {
+      gtag('event', 'conversion', {'send_to': 'AW-18048095591', 'event_category': 'contact', 'event_label': 'phone_click_diesel'});
+    }
+    function trackDirectionsClick() {
+      gtag('event', 'conversion', {'send_to': 'AW-18048095591', 'event_category': 'contact', 'event_label': 'directions_click_diesel'});
+    }
+  </script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="100% petroleum diesel — no biodiesel blend. Serving Kane County contractors, landscapers & fleet operators. Competitive rack-based pricing updated daily. 940 N Main St, Elburn IL." />
+  <meta name="keywords" content="diesel fuel Elburn IL, diesel Kane County, fleet diesel Elburn, contractor diesel IL-47, ULSD diesel Elburn, no biodiesel diesel Illinois, diesel 940 N Main Elburn" />
+  <title>Diesel Fuel — Amoco BP Elburn | Kane County Fleet & Contractors</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --green:    #2E7D32;
+      --green-lt: #388E3C;
+      --green-dk: #1B5E20;
+      --blue:     #004B87;
+      --white:    #FFFFFF;
+      --off:      #F5F5F5;
+      --gray:     #555555;
+      --light:    #E8E8E8;
+    }
+
+    html { scroll-behavior: smooth; }
+    body { font-family: 'Inter', sans-serif; color: #222; background: var(--white); }
+
+    /* ── HEADER ── */
+    header {
+      background: linear-gradient(135deg, var(--green-dk) 0%, var(--green) 60%, #1565C0 100%);
+      color: var(--white);
+      text-align: center;
+      padding: 52px 20px 44px;
+      position: relative;
+      overflow: hidden;
+    }
+    header::before {
+      content: '';
+      position: absolute;
+      top: -60px; right: -60px;
+      width: 220px; height: 220px;
+      border-radius: 50%;
+      background: rgba(255,255,255,0.05);
+      pointer-events: none;
+    }
+
+    .diesel-icon {
+      font-size: 3.2rem;
+      margin-bottom: 14px;
+      display: block;
+    }
+
+    header h1 {
+      font-size: clamp(1.8rem, 5vw, 2.8rem);
+      font-weight: 900;
+      letter-spacing: -0.5px;
+      line-height: 1.15;
+    }
+    header h1 span { color: #A5D6A7; }
+
+    .subheadline {
+      font-size: clamp(1rem, 2.5vw, 1.2rem);
+      font-weight: 600;
+      opacity: 0.92;
+      margin-top: 10px;
+      line-height: 1.4;
+    }
+
+    .badge-row {
+      display: flex;
+      gap: 10px;
+      justify-content: center;
+      flex-wrap: wrap;
+      margin-top: 18px;
+    }
+    .badge {
+      display: inline-block;
+      background: rgba(255,255,255,0.15);
+      border: 1px solid rgba(255,255,255,0.3);
+      border-radius: 999px;
+      padding: 6px 16px;
+      font-size: 0.82rem;
+      font-weight: 600;
+      letter-spacing: 0.4px;
+    }
+
+    .cta-row {
+      display: flex;
+      gap: 12px;
+      justify-content: center;
+      flex-wrap: wrap;
+      margin-top: 28px;
+    }
+    .btn {
+      display: inline-block;
+      padding: 14px 30px;
+      border-radius: 8px;
+      font-weight: 700;
+      font-size: 1rem;
+      text-decoration: none;
+      transition: transform 0.1s, opacity 0.1s;
+    }
+    .btn:active { transform: scale(0.97); }
+    .btn-white { background: var(--white); color: var(--green-dk); }
+    .btn-outline {
+      background: transparent;
+      color: var(--white);
+      border: 2px solid rgba(255,255,255,0.7);
+    }
+
+    /* ── PRICE HERO ── */
+    .price-hero {
+      background: var(--off);
+      padding: 40px 20px;
+      text-align: center;
+      border-bottom: 3px solid var(--green);
+    }
+    .price-label {
+      font-size: 0.85rem;
+      font-weight: 700;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      color: var(--green);
+      margin-bottom: 8px;
+    }
+    .price-display {
+      font-size: clamp(3.5rem, 10vw, 5rem);
+      font-weight: 900;
+      color: #111;
+      line-height: 1;
+    }
+    .price-display sup {
+      font-size: 2rem;
+      font-weight: 700;
+      vertical-align: super;
+    }
+    .price-note {
+      font-size: 0.85rem;
+      color: var(--gray);
+      margin-top: 10px;
+    }
+    .price-badge {
+      display: inline-block;
+      background: var(--green);
+      color: var(--white);
+      border-radius: 6px;
+      padding: 5px 14px;
+      font-size: 0.8rem;
+      font-weight: 700;
+      margin-top: 12px;
+      letter-spacing: 0.3px;
+    }
+
+    /* ── SECTIONS ── */
+    .section { padding: 52px 20px; max-width: 860px; margin: 0 auto; }
+    .section-title {
+      font-size: 1.55rem;
+      font-weight: 800;
+      color: var(--blue);
+      margin-bottom: 8px;
+    }
+    .section-sub {
+      font-size: 0.92rem;
+      color: var(--gray);
+      margin-bottom: 32px;
+    }
+    .divider {
+      height: 1px;
+      background: var(--light);
+      max-width: 860px;
+      margin: 0 auto;
+    }
+
+    /* ── KEY POINTS ── */
+    .points-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 20px;
+    }
+    .point-card {
+      background: var(--white);
+      border: 2px solid var(--light);
+      border-radius: 14px;
+      padding: 24px 20px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+      transition: transform 0.15s, box-shadow 0.15s;
+    }
+    .point-card:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+    }
+    .point-card::before {
+      content: '';
+      display: block;
+      width: 40px;
+      height: 4px;
+      background: var(--green);
+      border-radius: 2px;
+      margin-bottom: 14px;
+    }
+    .point-icon { font-size: 1.8rem; margin-bottom: 10px; display: block; }
+    .point-title { font-size: 1rem; font-weight: 700; color: #111; margin-bottom: 6px; }
+    .point-desc { font-size: 0.88rem; color: var(--gray); line-height: 1.55; }
+
+    /* ── NO BIODIESEL CALLOUT ── */
+    .callout {
+      background: linear-gradient(135deg, var(--green-dk), var(--green));
+      color: var(--white);
+      border-radius: 16px;
+      padding: 36px 32px;
+      margin: 0 auto 40px;
+      max-width: 860px;
+      text-align: center;
+    }
+    .callout h2 { font-size: 1.6rem; font-weight: 900; margin-bottom: 10px; }
+    .callout p { font-size: 0.95rem; opacity: 0.9; line-height: 1.6; max-width: 580px; margin: 0 auto; }
+
+    /* ── MAP ── */
+    .map-section {
+      padding: 48px 20px;
+      max-width: 860px;
+      margin: 0 auto;
+    }
+    .map-wrap {
+      border-radius: 16px;
+      overflow: hidden;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.12);
+      line-height: 0;
+    }
+    .map-wrap iframe { width: 100%; height: 380px; border: 0; display: block; }
+
+    /* ── INFO STRIP ── */
+    .info-strip {
+      background: var(--blue);
+      color: var(--white);
+      padding: 40px 20px;
+      text-align: center;
+    }
+    .info-strip h2 { font-size: 1.5rem; font-weight: 800; margin-bottom: 8px; }
+    .info-strip p { font-size: 0.95rem; opacity: 0.88; margin-bottom: 4px; line-height: 1.6; }
+    .info-strip a { color: #FFD700; text-decoration: none; font-weight: 700; }
+
+    /* ── FOOTER ── */
+    footer {
+      background: #111;
+      color: #888;
+      text-align: center;
+      padding: 20px;
+      font-size: 0.78rem;
+    }
+    footer a { color: #aaa; }
+
+    /* ── BREADCRUMB ── */
+    .breadcrumb {
+      background: #f0f0f0;
+      padding: 10px 20px;
+      font-size: 0.8rem;
+      color: #777;
+    }
+    .breadcrumb a { color: var(--blue); text-decoration: none; font-weight: 500; }
+    .breadcrumb a:hover { text-decoration: underline; }
+
+    /* ── MOBILE ── */
+    @media (max-width: 480px) {
+      .points-grid { grid-template-columns: 1fr; }
+      .callout { padding: 28px 20px; }
+      .callout h2 { font-size: 1.3rem; }
+      header { padding: 40px 16px 36px; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- BREADCRUMB -->
+<div class="breadcrumb">
+  <a href="/">Amoco BP Elburn</a> › Diesel Fuel
+</div>
+
+<!-- ══════════════════════════════════════
+     HEADER
+══════════════════════════════════════ -->
+<header>
+  <span class="diesel-icon">🚛</span>
+  <h1>100% Petroleum Diesel<br/><span>No Biodiesel</span></h1>
+  <p class="subheadline">Serving Kane County Contractors, Landscapers &amp; Fleet Operators</p>
+  <div class="badge-row">
+    <span class="badge">⛽ Open 24/7</span>
+    <span class="badge">🚚 Wide Lot · Easy Truck &amp; Trailer Access</span>
+    <span class="badge">📍 Elburn, IL · Off IL-47 &amp; Rt 38</span>
+  </div>
+  <div class="cta-row">
+    <a href="tel:+16303656671" class="btn btn-white" onclick="trackPhoneClick()">📞 630.365.6671</a>
+    <a href="https://maps.google.com/?q=940+N+Main+Street+Elburn+IL+60119" class="btn btn-outline" target="_blank" rel="noopener" onclick="trackDirectionsClick()">🗺️ Get Directions</a>
+  </div>
+</header>
+
+
+<!-- ══════════════════════════════════════
+     DIESEL PRICE
+══════════════════════════════════════ -->
+<div class="price-hero" id="prices">
+  <div class="price-label">Today's Diesel Price</div>
+  <div class="price-display"><sup>$</sup><span id="diesel-price">—</span></div>
+  <p class="price-note">Per gallon · Ultra Low Sulfur Diesel (ULSD) · 100% petroleum</p>
+  <span class="price-badge">✅ 100% Petroleum — Zero Biodiesel Blend</span>
+  <p class="price-note" style="margin-top:12px;" id="price-updated-note">Price last updated: <span id="updated-date">loading…</span></p>
+</div>
+
+<script>
+  fetch('/prices.json')
+    .then(r => r.json())
+    .then(d => {
+      if (d.diesel) document.getElementById('diesel-price').textContent = Number(d.diesel).toFixed(2);
+      if (d.updated) document.getElementById('updated-date').textContent = d.updated;
+    })
+    .catch(() => {
+      document.getElementById('diesel-price').textContent = '—';
+      document.getElementById('updated-date').textContent = 'See pump for current pricing';
+    });
+</script>
+
+
+<!-- ══════════════════════════════════════
+     NO BIODIESEL CALLOUT
+══════════════════════════════════════ -->
+<div style="padding: 0 20px; margin-top: 40px;">
+  <div class="callout">
+    <h2>🛡️ Pure Diesel. Every Fill.</h2>
+    <p>We pump <strong>100% ULSD petroleum diesel</strong> — no biodiesel blends, no additives. Your equipment runs on what it was built for. Consistent quality every time you pull in.</p>
+  </div>
+</div>
+
+
+<!-- ══════════════════════════════════════
+     KEY POINTS
+══════════════════════════════════════ -->
+<section class="section" id="why-us">
+  <div class="section-title">Built for Working Trucks</div>
+  <div class="section-sub">Everything a contractor, landscaper, or fleet operator needs — without the detour</div>
+
+  <div class="points-grid">
+    <div class="point-card">
+      <span class="point-icon">🚛</span>
+      <div class="point-title">Wide Lot — Easy In, Easy Out</div>
+      <div class="point-desc">Spacious layout with room for trucks, trailers, and equipment. No tight corners, no squeezing through. Pull in, fill up, and roll.</div>
+    </div>
+    <div class="point-card">
+      <span class="point-icon">📊</span>
+      <div class="point-title">Rack-Based Pricing — Updated Daily</div>
+      <div class="point-desc">Our diesel price tracks the BP Des Plaines rack. Competitive, transparent pricing — not inflated highway markups.</div>
+    </div>
+    <div class="point-card">
+      <span class="point-icon">🕐</span>
+      <div class="point-title">Open 7 Days a Week — 24 Hours</div>
+      <div class="point-desc">Early morning job site? Late run? We're always open. 24 hours a day, 365 days a year — no exceptions.</div>
+    </div>
+    <div class="point-card">
+      <span class="point-icon">📍</span>
+      <div class="point-title">Prime Location — Elburn, IL</div>
+      <div class="point-desc">940 N Main Street, right off IL-47 and Route 38. Easy access from Geneva, St. Charles, Batavia, Sugar Grove, and all of Kane County.</div>
+    </div>
+  </div>
+</section>
+
+
+<div class="divider"></div>
+
+
+<!-- ══════════════════════════════════════
+     MAP
+══════════════════════════════════════ -->
+<section class="map-section" id="directions">
+  <div class="section-title">Find Us</div>
+  <div class="section-sub">940 N Main Street (Route 47), Elburn IL 60119 · Right off IL-47 and Route 38 · Easy access for trucks &amp; trailers</div>
+  <div class="map-wrap">
+    <iframe
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2966.0!2d-88.4700!3d41.8950!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x880f2c6f1a8d6e3d%3A0x1!2s940+N+Main+St%2C+Elburn%2C+IL+60119!5e0!3m2!1sen!2sus!4v1"
+      allowfullscreen=""
+      loading="lazy"
+      referrerpolicy="no-referrer-when-downgrade"
+      title="Amoco BP Elburn Diesel Location Map"
+    ></iframe>
+  </div>
+  <div style="text-align:center; margin-top: 20px;">
+    <a href="https://maps.google.com/?q=940+N+Main+Street+Elburn+IL+60119" class="btn" style="background:var(--green);color:white;display:inline-block;" target="_blank" rel="noopener" onclick="trackDirectionsClick()">🗺️ Open in Google Maps</a>
+  </div>
+</section>
+
+
+<!-- ══════════════════════════════════════
+     CONTACT STRIP
+══════════════════════════════════════ -->
+<div class="info-strip" id="contact">
+  <h2>Diesel Available 24/7</h2>
+  <p>940 N Main Street · Elburn IL 60119 · Off IL-47 &amp; Route 38</p>
+  <p style="margin-top:12px;">📞 <a href="tel:+16303656671" onclick="trackPhoneClick()">630.365.6671</a></p>
+  <p style="margin-top:12px; font-size:0.85rem; opacity:0.7;">Serving Elburn, Geneva, St. Charles, Batavia, Sugar Grove &amp; Kane County contractors and fleet operators</p>
+  <div style="margin-top:20px;">
+    <a href="/" style="color:#A5D6A7; font-size:0.85rem; text-decoration:none;">← Back to Amoco BP Elburn home</a>
+  </div>
+</div>
+
+
+<!-- ══════════════════════════════════════
+     FOOTER
+══════════════════════════════════════ -->
+<footer>
+  <p>© 2026 Sevenstar Services, Inc. · 940 N Main Street, Elburn IL 60119 · <a href="tel:+16303656671" onclick="trackPhoneClick()">630.365.6671</a></p>
+  <p style="margin-top:6px;">BP and Amoco are registered trademarks of BP p.l.c. Used under license.</p>
+</footer>
+
+</body>
+</html>
