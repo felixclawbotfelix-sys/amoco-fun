@@ -1,0 +1,565 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=AW-18048095591"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'AW-18048095591');
+    function trackPhoneClick() {
+      gtag('event', 'conversion', {'send_to': 'AW-18048095591', 'event_category': 'contact', 'event_label': 'phone_click_collectors'});
+    }
+    function trackDirectionsClick() {
+      gtag('event', 'conversion', {
+        'send_to': 'AW-18048095591/vVnOCJDpwpEcEOeqgJ5D',
+        'value': 1.0,
+        'currency': 'USD'
+      });
+    }
+  </script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Collectibles at 7 Star Gas Station in Elburn IL — Pokémon Cards, Baseball Cards, Marvel Comics, Chicago Blackhawks Anniversary Cards. Open 24/7 at 940 N Main St, Elburn IL 60119." />
+  <meta name="keywords" content="Pokemon cards Elburn IL, collectibles Kane County, Charizard ex Elburn, baseball cards Elburn, Marvel comics gas station, Blackhawks cards Illinois, collectors 24 hour store Elburn" />
+  <title>Collectibles — Pokémon, Baseball Cards, Marvel &amp; More | 7 Star Gas Station Elburn IL</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg:         #0a0a0f;
+      --bg-card:    #12121a;
+      --bg-card2:   #1a1a26;
+      --border:     #2a2a3d;
+      --accent:     #7c3aed;
+      --accent-lt:  #a855f7;
+      --accent-glow:#7c3aed44;
+      --gold:       #f59e0b;
+      --gold-lt:    #fcd34d;
+      --red:        #ef4444;
+      --green:      #22c55e;
+      --white:      #ffffff;
+      --gray:       #94a3b8;
+      --gray-lt:    #cbd5e1;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background: var(--bg);
+      color: var(--white);
+      min-height: 100vh;
+      overflow-x: hidden;
+    }
+
+    /* ── NAV ── */
+    nav {
+      background: rgba(10,10,15,0.95);
+      border-bottom: 1px solid var(--border);
+      padding: 0 1.5rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 60px;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      backdrop-filter: blur(12px);
+    }
+    nav .logo {
+      font-size: 1.1rem;
+      font-weight: 800;
+      color: var(--white);
+      text-decoration: none;
+      letter-spacing: -0.02em;
+    }
+    nav .logo span { color: var(--accent-lt); }
+    nav .nav-links {
+      display: flex;
+      gap: 1.5rem;
+      list-style: none;
+    }
+    nav .nav-links a {
+      color: var(--gray);
+      text-decoration: none;
+      font-size: 0.85rem;
+      font-weight: 500;
+      transition: color 0.2s;
+    }
+    nav .nav-links a:hover { color: var(--white); }
+
+    /* ── HERO ── */
+    .hero {
+      position: relative;
+      padding: 5rem 1.5rem 4rem;
+      text-align: center;
+      overflow: hidden;
+    }
+    .hero::before {
+      content: '';
+      position: absolute;
+      top: -100px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 600px;
+      height: 600px;
+      background: radial-gradient(circle, var(--accent-glow) 0%, transparent 70%);
+      pointer-events: none;
+    }
+    .badge-open {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      background: rgba(34,197,94,0.15);
+      border: 1px solid rgba(34,197,94,0.4);
+      color: var(--green);
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      padding: 0.35rem 0.85rem;
+      border-radius: 999px;
+      margin-bottom: 1.5rem;
+    }
+    .badge-open::before {
+      content: '';
+      width: 7px; height: 7px;
+      background: var(--green);
+      border-radius: 50%;
+      animation: pulse 2s infinite;
+    }
+    @keyframes pulse {
+      0%, 100% { opacity: 1; transform: scale(1); }
+      50% { opacity: 0.5; transform: scale(1.3); }
+    }
+    .hero h1 {
+      font-size: clamp(2rem, 6vw, 3.5rem);
+      font-weight: 900;
+      line-height: 1.1;
+      letter-spacing: -0.03em;
+      margin-bottom: 1rem;
+      background: linear-gradient(135deg, #ffffff 0%, #a855f7 50%, #f59e0b 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+    .hero p {
+      font-size: clamp(1rem, 2.5vw, 1.2rem);
+      color: var(--gray-lt);
+      max-width: 600px;
+      margin: 0 auto 2.5rem;
+      line-height: 1.6;
+    }
+    .hero-ctas {
+      display: flex;
+      gap: 1rem;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+    .btn-primary {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      background: linear-gradient(135deg, var(--accent), var(--accent-lt));
+      color: var(--white);
+      font-weight: 700;
+      font-size: 0.95rem;
+      padding: 0.85rem 2rem;
+      border-radius: 12px;
+      text-decoration: none;
+      border: none;
+      cursor: pointer;
+      transition: opacity 0.2s, transform 0.1s;
+      box-shadow: 0 0 24px var(--accent-glow);
+    }
+    .btn-primary:hover { opacity: 0.9; transform: translateY(-1px); }
+    .btn-secondary {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      background: transparent;
+      color: var(--white);
+      font-weight: 700;
+      font-size: 0.95rem;
+      padding: 0.85rem 2rem;
+      border-radius: 12px;
+      text-decoration: none;
+      border: 1px solid var(--border);
+      cursor: pointer;
+      transition: border-color 0.2s, background 0.2s;
+    }
+    .btn-secondary:hover { border-color: var(--accent-lt); background: rgba(124,58,237,0.1); }
+
+    /* ── SECTION ── */
+    section { padding: 3.5rem 1.5rem; max-width: 1100px; margin: 0 auto; }
+    .section-label {
+      font-size: 0.7rem;
+      font-weight: 700;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--accent-lt);
+      margin-bottom: 0.75rem;
+    }
+    .section-title {
+      font-size: clamp(1.5rem, 3.5vw, 2.2rem);
+      font-weight: 800;
+      letter-spacing: -0.02em;
+      margin-bottom: 0.5rem;
+    }
+    .section-sub {
+      color: var(--gray);
+      font-size: 0.95rem;
+      margin-bottom: 2.5rem;
+    }
+
+    /* ── PRODUCT GRID ── */
+    .product-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+      gap: 1.25rem;
+    }
+    .product-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 1.5rem;
+      transition: border-color 0.2s, transform 0.15s, box-shadow 0.2s;
+      position: relative;
+      overflow: hidden;
+    }
+    .product-card::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(135deg, transparent 60%, rgba(124,58,237,0.06));
+      pointer-events: none;
+    }
+    .product-card:hover {
+      border-color: var(--accent);
+      transform: translateY(-3px);
+      box-shadow: 0 8px 32px rgba(124,58,237,0.2);
+    }
+    .card-cat {
+      font-size: 0.65rem;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      margin-bottom: 0.6rem;
+    }
+    .cat-pokemon { color: #facc15; }
+    .cat-marvel  { color: #ef4444; }
+    .cat-baseball { color: #60a5fa; }
+    .cat-hockey  { color: #f97316; }
+    .card-icon {
+      font-size: 2.2rem;
+      margin-bottom: 0.75rem;
+      display: block;
+    }
+    .card-name {
+      font-size: 1.05rem;
+      font-weight: 800;
+      line-height: 1.3;
+      margin-bottom: 0.4rem;
+      color: var(--white);
+    }
+    .card-desc {
+      font-size: 0.82rem;
+      color: var(--gray);
+      line-height: 1.5;
+      margin-bottom: 1rem;
+    }
+    .card-price {
+      font-size: 1.5rem;
+      font-weight: 900;
+      color: var(--gold-lt);
+      letter-spacing: -0.02em;
+    }
+    .card-price .price-note {
+      font-size: 0.75rem;
+      font-weight: 500;
+      color: var(--gray);
+      margin-left: 0.3rem;
+    }
+    .badge-hot {
+      position: absolute;
+      top: 1rem;
+      right: 1rem;
+      background: linear-gradient(135deg, #ef4444, #f97316);
+      color: white;
+      font-size: 0.65rem;
+      font-weight: 800;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      padding: 0.25rem 0.6rem;
+      border-radius: 999px;
+    }
+    .badge-coming {
+      position: absolute;
+      top: 1rem;
+      right: 1rem;
+      background: rgba(245,158,11,0.2);
+      border: 1px solid rgba(245,158,11,0.5);
+      color: var(--gold-lt);
+      font-size: 0.65rem;
+      font-weight: 800;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      padding: 0.25rem 0.6rem;
+      border-radius: 999px;
+    }
+
+    /* ── DIVIDER ── */
+    .divider {
+      border: none;
+      border-top: 1px solid var(--border);
+      margin: 0 1.5rem;
+    }
+
+    /* ── INFO STRIP ── */
+    .info-strip {
+      background: var(--bg-card);
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+      padding: 1.75rem 1.5rem;
+    }
+    .info-strip-inner {
+      max-width: 1100px;
+      margin: 0 auto;
+      display: flex;
+      gap: 2rem;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .info-item {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+    }
+    .info-icon {
+      width: 40px; height: 40px;
+      background: rgba(124,58,237,0.15);
+      border: 1px solid rgba(124,58,237,0.3);
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.1rem;
+      flex-shrink: 0;
+    }
+    .info-label { font-size: 0.72rem; color: var(--gray); font-weight: 500; }
+    .info-value { font-size: 0.95rem; font-weight: 700; color: var(--white); }
+
+    /* ── MAP ── */
+    .map-section { padding: 3.5rem 1.5rem; }
+    .map-section-inner { max-width: 1100px; margin: 0 auto; }
+    .map-wrap {
+      border-radius: 16px;
+      overflow: hidden;
+      border: 1px solid var(--border);
+      margin-top: 1.5rem;
+    }
+    .map-wrap iframe { display: block; width: 100%; height: 400px; border: 0; }
+
+    /* ── FOOTER ── */
+    footer {
+      background: var(--bg-card);
+      border-top: 1px solid var(--border);
+      padding: 2rem 1.5rem;
+      text-align: center;
+      color: var(--gray);
+      font-size: 0.82rem;
+    }
+    footer a { color: var(--accent-lt); text-decoration: none; }
+    footer .footer-links { display: flex; gap: 1.5rem; justify-content: center; flex-wrap: wrap; margin-top: 0.75rem; }
+
+    @media (max-width: 600px) {
+      .product-grid { grid-template-columns: 1fr 1fr; }
+      .hero-ctas { flex-direction: column; align-items: center; }
+      nav .nav-links { display: none; }
+    }
+    @media (max-width: 400px) {
+      .product-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a href="/" class="logo">amoco<span>.fun</span></a>
+  <ul class="nav-links">
+    <li><a href="/">Home</a></li>
+    <li><a href="/diesel.html">Diesel</a></li>
+    <li><a href="/collectors.html" style="color:#a855f7">Collectibles</a></li>
+  </ul>
+</nav>
+
+<!-- HERO -->
+<div class="hero">
+  <div class="badge-open">Open 24 / 7</div>
+  <h1>Collectibles at<br>7 Star Gas Station</h1>
+  <p>Pokémon Cards · Baseball Cards · Marvel Comics · Blackhawks Anniversary Cards<br>
+  <strong style="color:#cbd5e1">Elburn, IL — 940 N Main St</strong></p>
+  <div class="hero-ctas">
+    <a href="https://maps.google.com/?q=940+N+Main+St,+Elburn+IL+60119"
+       target="_blank" rel="noopener"
+       onclick="trackDirectionsClick()"
+       class="btn-primary">
+      📍 Get Directions
+    </a>
+    <a href="tel:+16303656671"
+       onclick="trackPhoneClick()"
+       class="btn-secondary">
+      📞 (630) 365-6671
+    </a>
+  </div>
+</div>
+
+<!-- INFO STRIP -->
+<div class="info-strip">
+  <div class="info-strip-inner">
+    <div class="info-item">
+      <div class="info-icon">🟢</div>
+      <div>
+        <div class="info-label">Hours</div>
+        <div class="info-value">Open 24 Hours, 7 Days</div>
+      </div>
+    </div>
+    <div class="info-item">
+      <div class="info-icon">📍</div>
+      <div>
+        <div class="info-label">Address</div>
+        <div class="info-value">940 N Main St, Elburn IL 60119</div>
+      </div>
+    </div>
+    <div class="info-item">
+      <div class="info-icon">📞</div>
+      <div>
+        <div class="info-label">Phone</div>
+        <div class="info-value"><a href="tel:+16303656671" onclick="trackPhoneClick()" style="color:inherit;text-decoration:none">(630) 365-6671</a></div>
+      </div>
+    </div>
+    <div class="info-item">
+      <div class="info-icon">⛽</div>
+      <div>
+        <div class="info-label">Also</div>
+        <div class="info-value">Fuel · Snacks · Energy Drinks</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- PRODUCT GRID -->
+<section>
+  <div class="section-label">In Stock Now</div>
+  <h2 class="section-title">Browse the Collection</h2>
+  <p class="section-sub">Available in-store. Walk in anytime — 24 hours a day, 7 days a week.</p>
+
+  <div class="product-grid">
+
+    <!-- Charizard ex -->
+    <div class="product-card">
+      <span class="badge-hot">🔥 Hot</span>
+      <span class="card-icon">🔴</span>
+      <div class="card-cat cat-pokemon">Pokémon TCG</div>
+      <div class="card-name">Charizard ex Premium Collection</div>
+      <div class="card-desc">The one everyone's looking for. Premium foil collection box featuring Charizard ex. Limited quantities — don't sleep on it.</div>
+      <div class="card-price">$74.99</div>
+    </div>
+
+    <!-- Booster 10-count -->
+    <div class="product-card">
+      <span class="card-icon">⚡</span>
+      <div class="card-cat cat-pokemon">Pokémon TCG</div>
+      <div class="card-name">Pokémon Booster Pack</div>
+      <div class="card-desc">10-count booster pack. Great entry point for new collectors or a quick hit of luck.</div>
+      <div class="card-price">$2.99 <span class="price-note">/ 10-pack</span></div>
+    </div>
+
+    <!-- Booster 50-count -->
+    <div class="product-card">
+      <span class="card-icon">📦</span>
+      <div class="card-cat cat-pokemon">Pokémon TCG</div>
+      <div class="card-name">Pokémon Booster Pack</div>
+      <div class="card-desc">50-count booster bundle. Stock up, trade with friends, or chase that rare pull.</div>
+      <div class="card-price">$12.99 <span class="price-note">/ 50-pack</span></div>
+    </div>
+
+    <!-- Marvel Comics -->
+    <div class="product-card">
+      <span class="card-icon">🕷️</span>
+      <div class="card-cat cat-marvel">Marvel Comics</div>
+      <div class="card-name">Marvel Comics 3-Pack</div>
+      <div class="card-desc">Three Marvel comics in one pack. Grab one for the road or for the collection.</div>
+      <div class="card-price">$3.99 <span class="price-note">/ 3-pack</span></div>
+    </div>
+
+    <!-- Baseball Cards -->
+    <div class="product-card">
+      <span class="card-icon">⚾</span>
+      <div class="card-cat cat-baseball">Baseball Cards</div>
+      <div class="card-name">Baseball Cards</div>
+      <div class="card-desc">10-card pack. Classic hobby, impulse price. Could be sitting on a rookie.</div>
+      <div class="card-price">$2.99 <span class="price-note">/ 10-count</span></div>
+    </div>
+
+    <!-- Blackhawks -->
+    <div class="product-card">
+      <span class="badge-coming">🏒 Special</span>
+      <span class="card-icon">🖤</span>
+      <div class="card-cat cat-hockey">Chicago Blackhawks</div>
+      <div class="card-name">Upper Deck 100th Anniversary Edition</div>
+      <div class="card-desc">Blackhawks 100th Anniversary commemorative cards by Upper Deck. A piece of Chicago hockey history.</div>
+      <div class="card-price" style="font-size:1.1rem;color:var(--gray-lt)">Ask in-store</div>
+    </div>
+
+  </div>
+</section>
+
+<hr class="divider" />
+
+<!-- MAP -->
+<div class="map-section">
+  <div class="map-section-inner">
+    <div class="section-label">Find Us</div>
+    <h2 class="section-title">940 N Main St, Elburn IL 60119</h2>
+    <p class="section-sub">Right off IL-47. Easy stop on the way through Kane County. Open around the clock.</p>
+    <div style="display:flex;gap:1rem;flex-wrap:wrap;margin-bottom:1.5rem">
+      <a href="https://maps.google.com/?q=940+N+Main+St,+Elburn+IL+60119"
+         target="_blank" rel="noopener"
+         onclick="trackDirectionsClick()"
+         class="btn-primary">📍 Get Directions</a>
+      <a href="tel:+16303656671"
+         onclick="trackPhoneClick()"
+         class="btn-secondary">📞 Call (630) 365-6671</a>
+    </div>
+    <div class="map-wrap">
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2965.3!2d-88.4721!3d41.8958!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x880f0c0e0e0e0e0e%3A0x0!2s940%20N%20Main%20St%2C%20Elburn%2C%20IL%2060119!5e0!3m2!1sen!2sus!4v1"
+        allowfullscreen=""
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"
+        title="7 Star Gas Station Elburn IL">
+      </iframe>
+    </div>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <p>7 Star Gas Station · Amoco BP Elburn · 940 N Main St, Elburn IL 60119 · Open 24/7</p>
+  <div class="footer-links">
+    <a href="/">Home</a>
+    <a href="/diesel.html">Diesel</a>
+    <a href="/collectors.html">Collectibles</a>
+    <a href="tel:+16303656671" onclick="trackPhoneClick()">(630) 365-6671</a>
+    <a href="https://maps.google.com/?q=940+N+Main+St,+Elburn+IL+60119" target="_blank" rel="noopener" onclick="trackDirectionsClick()">Directions</a>
+  </div>
+</footer>
+
+</body>
+</html>
