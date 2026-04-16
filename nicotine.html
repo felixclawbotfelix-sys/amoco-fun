@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=AW-18048095591"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'AW-18048095591');
+  </script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Nicotine pouches, vapes, and tobacco alternatives at Amoco BP Elburn. In-store only. Must be 21+ with valid ID. 940 N Main Street, Elburn IL 60119." />
+  <meta name="keywords" content="nicotine pouches Elburn IL, ZYN Elburn, nicotine vapes Elburn, tobacco store Elburn, Kane County nicotine, 21 plus nicotine Elburn" />
+  <meta name="robots" content="index, follow" />
+  <!-- Explicitly excluded from Google Ads — organic and direct traffic only -->
+  <title>Nicotine Products — Amoco BP Elburn | 21+ In-Store Only</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --red:    #CC0000;
+      --red-dk: #990000;
+      --blue:   #004B87;
+      --blue-lt:#0066B3;
+      --white:  #FFFFFF;
+      --off:    #F5F5F5;
+      --gray:   #555555;
+      --light:  #E8E8E8;
+      --green:  #2E7D32;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      color: #222;
+      background: var(--white);
+    }
+
+    /* ── AGE GATE BANNER ── */
+    .age-gate {
+      background: #1a1a1a;
+      color: var(--white);
+      text-align: center;
+      padding: 18px 20px;
+      border-bottom: 4px solid var(--red);
+    }
+    .age-gate-inner {
+      max-width: 860px;
+      margin: 0 auto;
+    }
+    .age-gate-title {
+      font-size: 1.1rem;
+      font-weight: 800;
+      letter-spacing: 0.5px;
+      color: #FFD700;
+      margin-bottom: 6px;
+    }
+    .age-gate-text {
+      font-size: 0.88rem;
+      line-height: 1.6;
+      opacity: 0.92;
+    }
+    .age-gate-text strong {
+      color: #FFD700;
+    }
+
+    /* ── HEADER ── */
+    header {
+      background: linear-gradient(135deg, var(--blue) 0%, var(--blue-lt) 50%, var(--red) 100%);
+      color: var(--white);
+      text-align: center;
+      padding: 40px 20px 36px;
+      position: relative;
+      overflow: hidden;
+    }
+    header::before {
+      content: '';
+      position: absolute;
+      top: -60px; right: -60px;
+      width: 220px; height: 220px;
+      border-radius: 50%;
+      background: rgba(255,255,255,0.06);
+      pointer-events: none;
+    }
+    header h1 {
+      font-size: clamp(1.6rem, 4.5vw, 2.4rem);
+      font-weight: 900;
+      letter-spacing: -0.5px;
+      line-height: 1.15;
+    }
+    header h1 span { color: #FFD700; }
+
+    .badge {
+      display: inline-block;
+      background: rgba(255,255,255,0.18);
+      border: 1px solid rgba(255,255,255,0.35);
+      border-radius: 999px;
+      padding: 6px 18px;
+      font-size: 0.85rem;
+      font-weight: 600;
+      letter-spacing: 0.5px;
+      margin-top: 12px;
+    }
+
+    .header-info {
+      margin-top: 16px;
+      font-size: 0.92rem;
+      opacity: 0.92;
+      line-height: 1.7;
+    }
+    .header-info a {
+      color: var(--white);
+      text-decoration: none;
+      font-weight: 600;
+    }
+    .header-info a:hover { text-decoration: underline; }
+
+    .cta-row {
+      display: flex;
+      gap: 12px;
+      justify-content: center;
+      flex-wrap: wrap;
+      margin-top: 22px;
+    }
+    .btn {
+      display: inline-block;
+      padding: 12px 28px;
+      border-radius: 8px;
+      font-weight: 700;
+      font-size: 0.92rem;
+      text-decoration: none;
+      transition: transform 0.1s, opacity 0.1s;
+    }
+    .btn:active { transform: scale(0.97); }
+    .btn-white {
+      background: var(--white);
+      color: var(--blue);
+    }
+    .btn-outline {
+      background: transparent;
+      color: var(--white);
+      border: 2px solid rgba(255,255,255,0.7);
+    }
+
+    /* ── SECTIONS ── */
+    .section { padding: 44px 20px; max-width: 860px; margin: 0 auto; }
+
+    .section-title {
+      font-size: 1.5rem;
+      font-weight: 800;
+      color: var(--blue);
+      margin-bottom: 6px;
+    }
+    .section-sub {
+      font-size: 0.9rem;
+      color: var(--gray);
+      margin-bottom: 28px;
+    }
+
+    /* ── PRODUCT GRID ── */
+    .products-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+      gap: 16px;
+    }
+
+    .product-card {
+      background: var(--off);
+      border: 1.5px solid var(--light);
+      border-radius: 14px;
+      text-align: center;
+      padding: 26px 14px 20px;
+      transition: transform 0.15s, box-shadow 0.15s;
+    }
+    .product-card:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 6px 20px rgba(0,0,0,0.09);
+    }
+    .product-icon {
+      font-size: 2rem;
+      display: block;
+      margin-bottom: 10px;
+    }
+    .product-name {
+      font-size: 0.88rem;
+      font-weight: 700;
+      color: #333;
+      line-height: 1.3;
+    }
+    .product-sub {
+      font-size: 0.75rem;
+      color: var(--gray);
+      margin-top: 4px;
+    }
+
+    /* ── LEGAL NOTICE BOX ── */
+    .legal-box {
+      background: #fff8e1;
+      border: 2px solid #f59f00;
+      border-radius: 12px;
+      padding: 22px 24px;
+      margin-top: 8px;
+    }
+    .legal-box-title {
+      font-size: 1rem;
+      font-weight: 800;
+      color: #7c4e00;
+      margin-bottom: 10px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .legal-box ul {
+      padding-left: 18px;
+      font-size: 0.88rem;
+      color: #5a3800;
+      line-height: 1.8;
+    }
+    .legal-box ul li { margin-bottom: 2px; }
+
+    /* ── DIVIDER ── */
+    .divider {
+      height: 1px;
+      background: var(--light);
+      max-width: 860px;
+      margin: 0 auto;
+    }
+
+    /* ── INFO STRIP ── */
+    .info-strip {
+      background: var(--blue);
+      color: var(--white);
+      text-align: center;
+      padding: 14px 20px;
+      font-size: 0.88rem;
+      font-weight: 600;
+    }
+    .info-strip a {
+      color: #FFD700;
+      text-decoration: none;
+    }
+
+    /* ── NAV BAR ── */
+    nav {
+      background: var(--white);
+      border-bottom: 2px solid var(--light);
+      padding: 10px 20px;
+      text-align: center;
+    }
+    nav a {
+      display: inline-block;
+      margin: 4px 10px;
+      font-size: 0.85rem;
+      font-weight: 600;
+      color: var(--blue);
+      text-decoration: none;
+    }
+    nav a:hover { text-decoration: underline; }
+
+    /* ── FOOTER ── */
+    footer {
+      background: #111;
+      color: #aaa;
+      text-align: center;
+      padding: 28px 20px;
+      font-size: 0.78rem;
+      line-height: 1.8;
+    }
+    footer a { color: #ccc; text-decoration: none; }
+    footer a:hover { text-decoration: underline; }
+
+    @media (max-width: 480px) {
+      .products-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+  </style>
+</head>
+<body>
+
+<!-- ══ AGE GATE ══════════════════════════════════════════════ -->
+<div class="age-gate">
+  <div class="age-gate-inner">
+    <div class="age-gate-title">⚠️ 21+ ONLY — VALID ID REQUIRED AT POINT OF PURCHASE</div>
+    <div class="age-gate-text">
+      All nicotine products on this page are sold <strong>in-store only</strong> at 940 N Main Street, Elburn IL 60119.
+      <strong>Illinois law requires age verification at the point of purchase for all nicotine products.</strong>
+      You must present a valid government-issued photo ID proving you are 21 or older. No exceptions.
+    </div>
+  </div>
+</div>
+
+<!-- ══ NAV ═══════════════════════════════════════════════════ -->
+<nav>
+  <a href="/">⛽ Home</a>
+  <a href="/diesel.html">🚛 Diesel</a>
+  <a href="/collectors.html">🃏 Collectibles</a>
+  <a href="https://maps.google.com/?q=940+N+Main+Street+Elburn+IL+60119" target="_blank" rel="noopener">📍 Directions</a>
+</nav>
+
+<!-- ══ HEADER ════════════════════════════════════════════════ -->
+<header>
+  <div class="badge">🟢 IN STORE — 21+ WITH VALID ID</div>
+  <h1 style="margin-top:16px;">Nicotine Products<br><span>at Amoco BP Elburn</span></h1>
+  <div class="header-info">
+    940 N Main Street, Elburn IL 60119 &nbsp;·&nbsp;
+    <a href="tel:+16303656671">(630) 365-6671</a><br>
+    Open 24 hours · 7 days a week
+  </div>
+  <div class="cta-row">
+    <a href="https://maps.google.com/?q=940+N+Main+Street+Elburn+IL+60119"
+       class="btn btn-white"
+       target="_blank" rel="noopener"
+       onclick="gtag('event','conversion',{'send_to':'AW-18048095591/vVnOCJDpwpEcEOeqgJ5D','value':1.0,'currency':'USD'});">
+      📍 Get Directions
+    </a>
+    <a href="tel:+16303656671" class="btn btn-outline">📞 Call the Store</a>
+  </div>
+</header>
+
+<!-- ══ PRODUCTS ══════════════════════════════════════════════ -->
+<section class="section">
+  <div class="section-title">What We Carry</div>
+  <div class="section-sub">In-store inventory · Available 24/7 · Must be 21+ with valid ID</div>
+
+  <div class="products-grid">
+    <div class="product-card">
+      <span class="product-icon">🟢</span>
+      <div class="product-name">Nicotine Pouches</div>
+      <div class="product-sub">ZYN, On!, Velo, Rogue &amp; more</div>
+    </div>
+    <div class="product-card">
+      <span class="product-icon">💨</span>
+      <div class="product-name">Nicotine Vapes</div>
+      <div class="product-sub">Disposables &amp; rechargeable</div>
+    </div>
+    <div class="product-card">
+      <span class="product-icon">🚬</span>
+      <div class="product-name">Cigarettes</div>
+      <div class="product-sub">Major brands in stock</div>
+    </div>
+    <div class="product-card">
+      <span class="product-icon">🍂</span>
+      <div class="product-name">Cigars &amp; Cigarillos</div>
+      <div class="product-sub">Swishers, Black &amp; Milds &amp; more</div>
+    </div>
+    <div class="product-card">
+      <span class="product-icon">🌿</span>
+      <div class="product-name">Chewing Tobacco</div>
+      <div class="product-sub">Dip &amp; snuff</div>
+    </div>
+    <div class="product-card">
+      <span class="product-icon">🔥</span>
+      <div class="product-name">Lighters &amp; Accessories</div>
+      <div class="product-sub">BIC, Clipper &amp; novelty</div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- ══ LEGAL NOTICE ══════════════════════════════════════════ -->
+<section class="section" style="padding-top: 36px; padding-bottom: 44px;">
+  <div class="section-title">Important — Illinois Law</div>
+  <div class="legal-box">
+    <div class="legal-box-title">⚠️ Age Verification Required</div>
+    <ul>
+      <li><strong>You must be 21 or older</strong> to purchase any nicotine or tobacco product in Illinois.</li>
+      <li><strong>Valid government-issued photo ID is required</strong> at the point of purchase — no exceptions.</li>
+      <li>Illinois law (Public Act 101-0002) prohibits the sale of tobacco and nicotine products to anyone under age 21.</li>
+      <li>All products are available <strong>in-store only</strong> at 940 N Main Street, Elburn IL 60119. We do not sell online.</li>
+      <li>We reserve the right to refuse sale to anyone who cannot provide valid proof of age.</li>
+    </ul>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- ══ FIND US ══════════════════════════════════════════════ -->
+<section class="section" style="padding-top:36px; padding-bottom:48px;">
+  <div class="section-title">Find Us</div>
+  <div class="section-sub">Open around the clock — no appointment needed</div>
+  <div style="font-size:0.95rem; line-height:2; color:#333;">
+    <strong>Amoco BP Elburn</strong><br>
+    940 N Main Street<br>
+    Elburn, IL 60119<br><br>
+    📞 <a href="tel:+16303656671" style="color:var(--blue); font-weight:600;">(630) 365-6671</a><br>
+    🕐 Open 24 hours · 7 days a week · 365 days a year<br>
+    📍 <a href="https://maps.google.com/?q=940+N+Main+Street+Elburn+IL+60119"
+         target="_blank" rel="noopener"
+         style="color:var(--blue); font-weight:600;">Get Directions on Google Maps</a>
+  </div>
+</section>
+
+<!-- ══ INFO STRIP ════════════════════════════════════════════ -->
+<div class="info-strip">
+  Also see: <a href="/">⛽ Fuel &amp; Gas Prices</a> &nbsp;·&nbsp;
+  <a href="/diesel.html">🚛 Diesel</a> &nbsp;·&nbsp;
+  <a href="/collectors.html">🃏 Pokémon &amp; Collectibles</a>
+</div>
+
+<!-- ══ FOOTER ════════════════════════════════════════════════ -->
+<footer>
+  <p>Amoco BP Elburn &nbsp;·&nbsp; 940 N Main Street, Elburn IL 60119 &nbsp;·&nbsp;
+    <a href="tel:+16303656671">(630) 365-6671</a></p>
+  <p style="margin-top:6px;">Open 24/7 · All nicotine products sold in-store only · Must be 21+ with valid ID</p>
+  <p style="margin-top:6px; font-size:0.72rem; color:#777;">
+    This page is not linked from Google Ads. Organic search and direct traffic only.<br>
+    Illinois law requires age verification at point of purchase for all nicotine products (Public Act 101-0002).
+  </p>
+  <p style="margin-top:10px;">
+    <a href="/">Home</a> &nbsp;·&nbsp;
+    <a href="/diesel.html">Diesel</a> &nbsp;·&nbsp;
+    <a href="/collectors.html">Collectibles</a> &nbsp;·&nbsp;
+    <a href="https://maps.google.com/?q=940+N+Main+Street+Elburn+IL+60119" target="_blank" rel="noopener">Directions</a>
+  </p>
+</footer>
+
+</body>
+</html>
