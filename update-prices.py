@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-update-prices.py — sync street prices from my-prices.json → prices.json
+update-prices.py — sync street prices from my-prices.json → prices.json + index.html
 Run this whenever you update street prices in the market-watch skill.
 
 Usage:
@@ -10,6 +10,7 @@ Usage:
 
 import json
 import os
+import re
 import sys
 import argparse
 from datetime import datetime
@@ -17,6 +18,31 @@ from datetime import datetime
 SITE_DIR = os.path.dirname(os.path.abspath(__file__))
 MY_PRICES = os.path.expanduser("~/.openclaw/workspace/skills/market-watch/data/my-prices.json")
 PRICES_JSON = os.path.join(SITE_DIR, "prices.json")
+INDEX_HTML  = os.path.join(SITE_DIR, "index.html")
+
+
+def update_html(prices):
+    """Write prices directly into index.html span tags — cache-proof."""
+    with open(INDEX_HTML, "r") as f:
+        html = f.read()
+
+    replacements = {
+        "p-regular":  f"{prices['regular']:.3f}",
+        "p-midgrade": f"{prices['midgrade']:.3f}",
+        "p-premium":  f"{prices['premium']:.3f}",
+        "p-diesel":   f"{prices['diesel']:.3f}",
+    }
+
+    for span_id, value in replacements.items():
+        # Match: <span id="p-regular">anything</span>
+        pattern = rf'(<span id="{span_id}">)[^<]*(</span>)'
+        replacement = rf'\g<1>{value}\2'
+        html = re.sub(pattern, replacement, html)
+
+    with open(INDEX_HTML, "w") as f:
+        f.write(html)
+
+    print(f"✅ index.html updated with live prices")
 
 
 def main():
@@ -39,7 +65,6 @@ def main():
             "diesel":   prices.get("diesel",   0),
         }
     else:
-        # Load existing prices.json
         with open(PRICES_JSON) as f:
             out = json.load(f)
 
@@ -49,12 +74,15 @@ def main():
     if args.premium:  out["premium"]  = args.premium
     if args.diesel:   out["diesel"]   = args.diesel
 
-    # Format updated date
     out["updated"] = datetime.now().strftime("%B %-d, %Y")
 
+    # Write prices.json
     with open(PRICES_JSON, "w") as f:
         json.dump(out, f, indent=2)
         f.write("\n")
+
+    # Write directly into index.html (cache-proof)
+    update_html(out)
 
     print(f"✅ prices.json updated:")
     print(f"   Regular:  ${out['regular']:.3f}")
